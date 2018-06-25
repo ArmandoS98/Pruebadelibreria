@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:scrolling_image_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <com.q42.android.scrollingimageview.ScrollingImageView
+        android:id="@+id/scrolling_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        scrolling_image_view:speed="1dp"
+        scrolling_image_view:src="@drawable/boku" />
+
+
+    <xyz.hanks.library.bang.SmallBangView
+        android:layout_below="@+id/scrolling_background"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/like_heart"
+        android:layout_width="56dp"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/heart_selector"
+            android:text="Hello World!"/>
+    </xyz.hanks.library.bang.SmallBangView>
+
+    <xyz.hanks.library.bang.SmallBangView
+        android:id="@+id/like_text"
+        android:layout_below="@+id/like_heart"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:circle_end_color="#ffbc00"
+        app:circle_start_color="#fa9651"
+        app:dots_primary_color="#fa9651"
+        app:dots_secondary_color="#ffbc00">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="hanks"
+            android:textColor="@color/text_selector"
+            android:textSize="14sp"/>
+    </xyz.hanks.library.bang.SmallBangView>
+
+</RelativeLayout>
